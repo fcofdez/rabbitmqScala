@@ -5,7 +5,7 @@ import com.rabbitmq.client._
 object Rabbit {
   def main(args: Array[String]){
 
-    var factory = new ConnectionFactory()
+    val factory = new ConnectionFactory()
       factory.setHost("localhost")
     val connection = factory.newConnection
     val channel = connection.createChannel
@@ -20,14 +20,15 @@ object Rabbit {
     while(true){
       var delivery = consumer.nextDelivery
       var message = new String(delivery.getBody())
-        println(message)
+      println(message)
+      doWork(message)
 
       channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false)
     }
   }
 
   def doWork(str: String){
-    
+   Thread.sleep(9000)
   }
 }
 
