@@ -1,0 +1,49 @@
+;; If your project contains a lot of files, it is advisable to enable (:disable-source-load-on-startup t)
+;; Otherwise Ensime might incur a massive lag at startup time
+;; See more information about that at http://aemoncannon.github.com/ensime/index.html
+
+(
+  :subprojects (
+    (
+      :name "rabbit-queues"
+      :module-name "rabbit-queues"
+      :depends-on-modules (
+      
+      )
+      :package "rabbit-queues"
+      :version "1.0"
+      :compile-deps (
+        "/home/fran/.sbt/boot/scala-2.10.1/lib/scala-library.jar"
+        "/home/fran/.ivy2/cache/com.rabbitmq/amqp-client/jars/amqp-client-2.8.1.jar"
+        "/home/fran/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/jars/akka-actor_2.10-2.2-SNAPSHOT.jar"
+        "/home/fran/.ivy2/cache/com.typesafe/config/bundles/config-1.0.0.jar"
+      )
+      :runtime-deps (
+        "/home/fran/.sbt/boot/scala-2.10.1/lib/scala-library.jar"
+        "/home/fran/.ivy2/cache/com.rabbitmq/amqp-client/jars/amqp-client-2.8.1.jar"
+        "/home/fran/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/jars/akka-actor_2.10-2.2-SNAPSHOT.jar"
+        "/home/fran/.ivy2/cache/com.typesafe/config/bundles/config-1.0.0.jar"
+        "/home/fran/devel/rabbit-queues/target/scala-2.10/classes"
+        "/home/fran/devel/rabbit-queues/target/scala-2.10/classes"
+      )
+      :test-deps (
+        "/home/fran/.sbt/boot/scala-2.10.1/lib/scala-library.jar"
+        "/home/fran/.ivy2/cache/com.rabbitmq/amqp-client/jars/amqp-client-2.8.1.jar"
+        "/home/fran/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/jars/akka-actor_2.10-2.2-SNAPSHOT.jar"
+        "/home/fran/.ivy2/cache/com.typesafe/config/bundles/config-1.0.0.jar"
+        "/home/fran/devel/rabbit-queues/target/scala-2.10/classes"
+        "/home/fran/devel/rabbit-queues/target/scala-2.10/test-classes"
+      )
+      :source-roots (
+        "/home/fran/devel/rabbit-queues/src/main/scala"
+        "/home/fran/devel/rabbit-queues/src/main/java"
+        "/home/fran/devel/rabbit-queues/target/scala-2.10/src_managed/main"
+        "/home/fran/devel/rabbit-queues/src/test/scala"
+        "/home/fran/devel/rabbit-queues/src/test/java"
+        "/home/fran/devel/rabbit-queues/target/scala-2.10/src_managed/test"
+      )
+      :target "/home/fran/devel/rabbit-queues/target/scala-2.10/classes"
+      :test-target "/home/fran/devel/rabbit-queues/target/scala-2.10/test-classes"
+    )
+  )
+)
